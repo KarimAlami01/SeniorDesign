@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Match Article</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2078e2;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px;
+      }
+      .image {
+        width: 300px;
+        margin-right: 20px;
+      }
+      .text {
+        flex-grow: 1;
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 32px;
+        margin: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Match Article</h1>
+    <div class="container">
+        <div class="text">
+            <div>{{ result }}</div>
+        </div>
+        <img class="image" src="/static/game-pic.jpeg" alt="My Image">
+    </div>
+  </body>
+</html>
