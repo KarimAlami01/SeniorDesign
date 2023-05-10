@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Team Description</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2078e2;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px;
+      }
+      .image {
+        width: 300px;
+        margin-right: 20px;
+      }
+      .text {
+        flex-grow: 1;
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 32px;
+        margin: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Team Description</h1>
+    <div class="container">
+        {% if team_logo_url %}
+            <img src="{{ team_logo_url }}" alt="{{ search_query }} logo">
+        {% else %}
+            <img src="https://via.placeholder.com/300x300.png?text=Image" alt="Placeholder image">
+        {% endif %}
+        <div class="text">
+            <div>{{ result }}</div>
+      </div>
+    </div>
+  </body>
+</html>

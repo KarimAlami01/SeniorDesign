@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+	<title>My Website Home Page</title>
+	<style>
+        body {
+			background-color: #2078e2;
+		}
+		header {
+			text-align: center;
+		}
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+        h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
+		form {
+			text-align: center;
+		}
+		label {
+			font-size: 24px;
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="text"] {
+			font-size: 18px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 2px solid #ccc;
+			margin-right: 10px;
+		}
+		button[type="submit"] {
+			font-size: 18px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: white;
+			cursor: pointer;
+		}
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .link-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .link-list li {
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+	</style>
+</head>
+
+<body>
+  <header>
+		<h1>Super Reporter</h1>
+        <h2>The world's first Artificial Intelligence based reporter!</h2>
+		<img src="/static/audl.jpeg" alt="My Image">
+	</header>
+  <form action="/" method="post">
+    <label for="team">Enter a team name for brief team description:</label>
+    <input type="text" id="team" name="team" placeholder="e.g. Atlanta Hustle" required>
+    <button type="submit">Go!</button>
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+  <div class="links">
+    <ul class="link-list">
+        <li><a href="/match1">Toronto Rush vs New York Empire</a></li>
+        <li><a href="/match2">Atlanta Hustle vs Carolina Flyers</a></li>
+        <li><a href="/match3">Colorado Summit vs San Diego Growlers</a></li>
+        <li><a href="/match4">Salt Lake Shred vs Portland Nitro</a></li>
+        <li><a href="/match5">Toronto Rush vs Boston Glory</a></li>
+    </ul>
+    <ul class="link-list">
+        <li><a href="/match6">Salt Lake Shred vs Seattle Cascades</a></li>
+        <li><a href="/match7">Minnesota Wind Chill vs Indianapolis Alleycats</a></li>
+        <li><a href="/match8">Dallas Legion vs Austin Sol</a></li>
+        <li><a href="/match9">Colorado Summit vs LA Aviators</a></li>
+        <li><a href="/match10">Philadelphia Phoenix vs DC Breeze</a></li>
+    </ul>
+  </div>
+</body>
+
