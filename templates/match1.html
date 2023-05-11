@@ -34,7 +34,9 @@
     <h1>Match Article</h1>
     <div class="container">
         <div class="text">
-            <div>{{ result }}</div>
+          {% for paragraph in result.split('\n') %}
+          <p>{{ paragraph }}</p>
+      {% endfor %}
         </div>
         <img class="image" src="/static/game-pic.jpeg" alt="My Image">
     </div>
