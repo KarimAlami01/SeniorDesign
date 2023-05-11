@@ -39,7 +39,9 @@
             <img src="https://via.placeholder.com/300x300.png?text=Image" alt="Placeholder image">
         {% endif %}
         <div class="text">
-            <div>{{ result }}</div>
+          {% for paragraph in result.split('\n') %}
+          <p>{{ paragraph }}</p>
+      {% endfor %}
       </div>
     </div>
   </body>
